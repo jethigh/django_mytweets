@@ -76,7 +76,7 @@ WSGI_APPLICATION = 'django_mytweets.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
+        'NAME': 'django_mytweetsdb',
 	'USER': 'postgres',
 	'HOST': 'django_postgres',
 	'PORT': 5432,
