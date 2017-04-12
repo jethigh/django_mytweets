@@ -2,8 +2,13 @@ version: '2'
 services:
   db:
     image: postgres
+    hostname: django_postgres
+    container_name: django_postgres
+
   web:
     build: .
+    hostname: django_web
+    container_name: django_web
     command: python manage.py runserver 0.0.0.0:8000
     volumes:
       - ./code/:/code
