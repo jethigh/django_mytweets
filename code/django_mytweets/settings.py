@@ -77,7 +77,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'django_mytweetsdb',
-	'USER': 'postgres',
+	'USER': 'django_user',
+	'PASSWORD': 'django_password',
 	'HOST': 'django_postgres',
 	'PORT': 5432,
     }

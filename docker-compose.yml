@@ -1,12 +1,16 @@
 version: '2'
 services:
   db:
-    image: postgres
+    build: ./db
     hostname: django_postgres
     container_name: django_postgres
+    environment:
+      - POSTGRES_PASSWORD=password
+    volumes:
+      - /home/jethigh/python/django_mytweets/db/data:/var/lib/postgresql/data:rw
 
   web:
-    build: .
+    build: ./web
     hostname: django_web
     container_name: django_web
     command: python manage.py runserver 0.0.0.0:8000
