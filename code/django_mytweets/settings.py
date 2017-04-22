@@ -24,7 +24,6 @@ SECRET_KEY = '0^9#$@kfz0n0fa=2&sum=dm5lu+9z)lm!szlr480eto*=t_vr)'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
 ALLOWED_HOSTS = []
 
 
@@ -37,6 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'bootstrap3',
 ]
 
 MIDDLEWARE = [
@@ -54,7 +54,7 @@ ROOT_URLCONF = 'django_mytweets.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [ os.path.join(BASE_DIR, 'templates') ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -66,6 +66,7 @@ TEMPLATES = [
         },
     },
 ]
+
 
 WSGI_APPLICATION = 'django_mytweets.wsgi.application'
 

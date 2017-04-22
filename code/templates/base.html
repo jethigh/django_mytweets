@@ -1,0 +1,20 @@
+{# Load the tag library #}
+{% load bootstrap3 %}
+
+{# Load CSS and JavaScript #}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+<html>
+
+<head>
+</head>
+
+<body>
+{% block content %}
+<h1>Hello {{name}}</h1>
+{% endblock %}
+</body>
+
+</html>
+
