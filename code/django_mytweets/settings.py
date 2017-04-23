@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'bootstrap3',
+    'user_profile',
+    'tweets',
 ]
 
 MIDDLEWARE = [
@@ -78,10 +80,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'django_mytweetsdb',
-	'USER': 'django_user',
-	'PASSWORD': 'django_password',
-	'HOST': 'django_postgres',
-	'PORT': 5432,
+        'USER': 'django_user',
+        'PASSWORD': 'django_password',
+        'HOST': 'django_postgres',
+        'PORT': 5432,
     }
 }
 

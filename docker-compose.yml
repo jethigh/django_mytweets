@@ -6,6 +6,7 @@ services:
     container_name: django_postgres
     environment:
       - POSTGRES_PASSWORD=password
+      - TZ=Europe/Warsaw
     volumes:
       - /home/jethigh/python/django_mytweets/db/data:/var/lib/postgresql/data:rw
 
@@ -13,6 +14,8 @@ services:
     build: ./web
     hostname: django_web
     container_name: django_web
+    environment:
+      - TZ=Europe/Warsaw
     command: python manage.py runserver 0.0.0.0:8000
     volumes:
       - ./code/:/code
